@@ -1,0 +1,15 @@
+# Ignore node_modules everywhere
+**/node_modules/
+
+# Ignore environment variables
+**/.env
+
+# Ignore logs, builds, caches
+*.log
+**/dist/
+**/build/
+**/.cache/
+
+# Ignore folders you don't want to push
+/java-backend/
+/ui_pages/
