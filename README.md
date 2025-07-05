@@ -1,68 +1,105 @@
-# CodeGenius
-# AI Interview Preparation Platform
+# MockMate 🎓💻
+## AI-Powered Interview Preparation Platform
 
-We are developing an AI-powered self-interview preparation platform. This platform leverages the power of AI and natural language processing to simulate real interview scenarios, providing users with valuable feedback and resources to enhance their interview skills.
+**MockMate** is a smart, AI-integrated platform designed to help students and professionals practice and improve their interview skills through a self-guided, interactive interface. The platform simulates real interview environments and provides **instant, AI-generated feedback** using the **Gemini API**.
 
-## Key Features
-## UI Pages
+---
 
-- [Home Page](ui_pages/homepage.jpeg)
-![Home Page](ui_pages/homepage.jpeg)
-- [Interview Selection Page](ui_pages/interview_selection.jpeg)
-![Interview Selection Page](ui_pages/interview_selection.jpeg)
-- [Practice Interview Page](ui_pages/progress.jpeg)
-![Practice Interview Page](ui_pages/progress.jpeg)
-- [Feedback and Analysis Page](ui_pages/feedback.jpeg)
-![Feedback and Analysis Page](ui_pages/feedback.jpeg)
+## 🚀 Key Features
 
-### Interview Simulator
+### 🎙️ Real-Time Interview Simulation
 
-- Our platform allows students to practice for interviews by engaging in realistic conversations with an AI interviewer, powered by the [OpenAI API](https://openai.com/product#made-for-developers). If you're new to OpenAI API, you can get started [here](https://www.builder.io/blog/stream-ai-javascript).
-- Users can choose the type of interview they want to practice, such as MERN, Node, or Java, and receive a series of relevant questions.
-- The OpenAI API dynamically generates questions and provides appropriate responses based on student answers.
-- The AI adapts its tone and style of questioning to simulate different interviewer behaviors, depending on the type of interview selected.
-- We aim to provide a communicative interview experience by utilizing text-to-speech libraries, taking inspiration from the Masai VI platform.
+- Users select an interview domain:  
+  **Behavioral**, **Java**, or **CS Fundamentals**.
+- For each session:
+  - **5 random questions** are selected from a MongoDB Atlas database.
+  - Questions are displayed one-by-one.
+  - The user responds **via speech**, captured using the **Web Speech API**.
+  - Audio is converted to text and submitted automatically.
 
-### Personalized Feedback
+---
 
-- Our platform utilizes AI to analyze students' interview responses and offers constructive feedback.
-- Feedback covers various aspects, including content, delivery, and overall performance of student answers.
-- Strengths and areas for improvement are highlighted, such as communication skills, technical knowledge, or problem-solving abilities.
+### 🤖 AI-Powered Feedback
 
-### User-Friendly Interface
+- Each response is sent to **Google’s Gemini API**, which:
+  - Analyzes the answer
+  - Provides **instant feedback**
+  - Highlights strengths and suggests improvements
+- The feedback considers:
+  - Content quality
+  - Clarity
+  - Relevance
+  - Communication skills
 
-- We prioritize a user-friendly web or mobile interface that is intuitive, visually appealing, and easy to navigate.
-- Our goal is to ensure a seamless experience for users, allowing them to focus on interview preparation without encountering technical issues.
+---
 
-## Tech Stacks to Be Used
+### ✅ Clean Workflow
 
-- **Frontend**: React with Typescript (Mandatory)
-- **Styling**: Tailwind CSS (Mandatory)
-- **AI Integration**: OpenAI API (If you're new to OpenAI API, check out this [guide](https://www.builder.io/blog/stream-ai-javascript))
-- **Data Visualization and Insights**: Charts (optional)
-- **Backend Options**: Node.js with Express and MongoDB or Java Spring Boot
+1. Users start at the **Home Page**
+2. Choose interview type and begin simulation
+3. Answer 5 questions via voice
+4. Receive live feedback after each answer
+5. Land on a **Thank You Page** with a restart option
 
-## Team Composition
+---
 
-- Each team will consist of 5 members.
+## 🧠 Technologies Used
 
-### Team Members
+### 🖥️ Frontend
+- **React JS**
+- **Tailwind CSS**
+- **Web Speech API** (speech-to-text conversion)
 
-- [Devesh](https://github.com/member1)
-- [Nikhil Kumar](https://github.com/member2)
-- [Satya Indra](https://github.com/member3)
-- [Akash mishra](https://github.com/member3)
+### 🧪 AI & Feedback
+- **Gemini API** (for intelligent answer evaluation)
 
-## Getting Started
+### 🌐 Backend
+- **Node.js** with **Express.js**
+- **MongoDB Atlas** (cloud database to store questions and logs)
 
-To get started with the development of this platform, follow these steps:
+---
 
-1. Clone this repository to your local machine.
-2. Set up the required development environment, including React, Tailwind CSS, and the OpenAI API.
-3. Start building and contributing to the project.
+## 📋 UI Pages
 
-## License
+- Home Page
+- Interview Selection Page
+- Practice Interview Page
+- Feedback and Analysis Page
 
-This project is licensed under the [MIT License](LICENSE).
+---
 
-Happy coding!
+## ⚙️ Getting Started
+
+Follow these steps to run the project locally:
+
+### 🔧 Prerequisites
+- Node.js installed
+- MongoDB Atlas connection string
+- Gemini API key
+
+### 📦 Setup Instructions
+
+```bash
+# Clone the repo
+git clone https://github.com/Aryas2004/AI-interview-Platform.git
+
+# Go to backend folder
+cd express-backend
+
+# Create a .env file
+touch .env
+
+# Install backend dependencies
+npm install
+
+# Start backend
+npm start
+# Go to frontend folder
+cd ../frontend
+
+# Install frontend dependencies
+npm install
+
+# Start frontend
+npm start
+
